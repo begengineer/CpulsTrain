@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// オブジェクトとポインタ
+
 class Student {
     public:
         int num; // 学籍番号
@@ -15,18 +17,12 @@ void Student::show(){
 
 // メイン関数
 int main(){
-    int i;
-    Student array[3]; // Studentクラスの配列を宣言
-    for(i = 0; i < 3; i++){
-        cout << "学生" << i + 1 << "の学籍番号を入力してください: ";
-        cin >> array[i].num; // 学籍番号を入力
-        cout << "学生" << i + 1 << "の学年を入力してください: ";
-        cin >> array[i].year; // 学年を入力
-    }
-    for(i = 0; i < 3; i++){
-        array[i].show();
-    }
-    cout << endl;
-    
+    Student tanaka; // Studentクラスのオブジェクトs1を作成
+    tanaka.num = 12345; // 学籍番号を設定
+    tanaka.year = 2; // 学年を設定
+
+    Student *ptr = &tanaka;
+    ptr->show(); // ポインタを使ってshow関数を呼び出す
+
     return 0;
 }
