@@ -30,7 +30,7 @@ int main(){
 
     change(ptr); // ポインタを使ってchange関数を呼び出す
 
-    ptr->show(); // 変更後の内容を表示
+    (*ptr).show(); // 変更後の内容を表示
 
     return 0;
 }
