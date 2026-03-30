@@ -3,24 +3,29 @@ using namespace std;
 
 class OldClass{
     public:
-    virtual void introduce(){ // 仮想関数として定義してあげる必要がある。
-        cout << "old class" << endl;
+    virtual void hello(){ // 仮想関数として定義してあげる必要がある。
+        cout << "自己紹介をしてください" << endl;
     }
 };
 
-class NewClass : public OldClass{
+class Tanaka : public OldClass{
     public:
-    void introduce(){
-        cout << "new class" << endl;
+    void hello(){
+        cout << "田中です。" << endl;
     }
 };
+
+class Sato : public OldClass{
+    public:
+    void hello(){
+        cout << "佐藤です。" << endl;
+    }
+};
+
 
 int main(){
-    NewClass oc;
-    oc.introduce(); // old class
-
-    // 継承元の関数を呼び出すこともできる。
-    oc.OldClass::introduce(); // new class
+    Sato sato;
+    sato.hello();
 
     return 0;
 }
