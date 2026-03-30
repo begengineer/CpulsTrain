@@ -8,7 +8,7 @@ using namespace std;
 // 生徒クラスを作成
 // 基本クラス
 class Student{
-    public:
+    protected: // 派生クラスからアクセスできるようにするためにprotectedを使用
         int num1;
         void show();
 };
@@ -22,12 +22,14 @@ void Student::show(){
 class Teacher : public Student{ //　ここでStudentクラスを継承している
     public:
         int num2;
+        void setNum2(int n){
+            num1 = n;
+        }
 };
 
 int main(){
     Teacher t;
-    t.num1 = 10; // Studentクラスのnum1をTeacherクラスで使用できる
-    t.num2 = 20; // Teacherクラスのnum2を使用できる
-    cout << "num2: " << t.num2 << endl; // Studentクラスのnum1をTeacherクラスで使用できる
-    t.show(); // Studentクラスのshow関数をTeacherクラスで使用でき
+    t.setNum2(10);
+
+    return 0;
 }
