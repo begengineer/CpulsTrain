@@ -27,7 +27,7 @@ class NewClass : public OldClass{ // OldClassを継承している
 };
 
 // 派生クラスのコンストラクタで指定
-NewClass::NewClass() : OldClass(){ // OldClassのコンストラクタを呼び出す(どっちのコンストラクタを使用するのかを指定する
+NewClass::NewClass() : OldClass(10){ // OldClassのコンストラクタを呼び出す(どっちのコンストラクタを使用するのかを指定する
     // コンストラクタの実装
     cout << "NewClassのコンストラクタ" << endl;
 };
