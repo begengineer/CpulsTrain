@@ -28,6 +28,8 @@ NewClass::NewClass(int a){
 NewClass::NewClass(){
     num = 0;
     cout << "default constructor" << endl;
+}
+
 NewClass::NewClass(const NewClass &obj){
     num = obj.num;
     cout << "copy constructor (引数: const NewClass &obj)" << endl;
