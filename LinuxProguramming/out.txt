@@ -1,0 +1,6 @@
+a.out
+input.txt
+mamo.md
+out.txt
+run.sh
+test1.c
